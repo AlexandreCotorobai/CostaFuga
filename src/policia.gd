@@ -17,12 +17,10 @@ func _physics_process(delta):
 			self.velocity = Vector2(consts.SPEED, 0)
 		else:
 			self.velocity = Vector2(consts.police_speed, 0)
-		if self.position.x < 1000:
-			move_and_slide()
-		if self.position.x > 50:
-			# loose game
-			pass
-		
+			if consts.police_speed < 20:
+				consts.police_speed *= 1.01
+
+		move_and_slide()
 	else:
 		$AnimatedSprite2D.stop()
 

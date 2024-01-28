@@ -7,7 +7,7 @@ func _ready():
 
 func reset():
 	set_rotation(0)
-	
+
 	# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if consts.game_running == true:
