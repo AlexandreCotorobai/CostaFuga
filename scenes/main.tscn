@@ -16,6 +16,8 @@ font_names = PackedStringArray("Ink Free")
 [sub_resource type="LabelSettings" id="LabelSettings_xqvlh"]
 font = SubResource("SystemFont_0h7sp")
 font_size = 40
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cri5j")
