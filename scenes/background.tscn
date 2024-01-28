@@ -12,5 +12,11 @@ position = Vector2(640, 359.5)
 scale = Vector2(1.50117, 1.7119)
 texture = ExtResource("1_qaewh")
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(638, 359.5)
+scale = Vector2(1.50117, 1.7119)
+texture = ExtResource("1_qaewh")
+offset = Vector2(854, 0)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("SegmentShape2D_qfjdu")
