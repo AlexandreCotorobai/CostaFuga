@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://c7u1ow52455jf" path="res://images/misc/MONEY-500.png" id="1_xi1xi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6h3b"]
-size = Vector2(86, 48)
+size = Vector2(86, 44)
 
 [node name="Money" type="Area2D"]
+position = Vector2(2, -40)
 script = ExtResource("1_3q6aa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,7 +16,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("1_xi1xi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1319, 658)
+position = Vector2(1319, 660)
 shape = SubResource("RectangleShape2D_f6h3b")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -7,7 +7,7 @@ var scroll
 var bg_scroll
 var score
 const SCROLL_SPEED : int = 4
-const BG_SCROLL_SPEED : int = 2
+const BG_SCROLL_SPEED : int = 1
 var screen_size : Vector2i
 var ground_height : int
 var moneyArray : Array
@@ -20,16 +20,16 @@ func _ready():
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
 	new_game()
-
+	
 func new_game():
 	game_over = false
 	score = 0
-	bg_scroll = 0
 	scroll = 0
+	bg_scroll = 0
 	moneyArray.clear()
 	generate_money()
 	$Costa.reset()
-
+	
 func start_game():
 	consts.game_running = true
 	$Timer.start()
@@ -51,23 +51,26 @@ func _process(delta):
 		bg_scroll += BG_SCROLL_SPEED
 		if bg_scroll >= screen_size.x:
 			bg_scroll = 0
-		
 	#move ground
 	$Ground.position.x = -scroll
-	$Background2.position.x = -bg_scroll
 	
+	$Background.position.x = -bg_scroll
 	#move money
 	for money in moneyArray:
+		#print("MONEYYYYY")
 		if money.is_inside_tree():
+			#print("MONEYYYYY")
 			money.position.x -= SCROLL_SPEED
 
 func _on_timer_timeout():
+	print("TIMER")
 	generate_money()
 
 func generate_money():
 	var money = money_scene.instantiate()
 	money.position.x = screen_size.x + MONEY_DELAY
-	money.position.y = (screen_size.y - ground_height)
+	print("GAGAG")
+	money.position.y = 0
 	money.hit.connect(money_hit)
 	add_child(money)
 	moneyArray.append(money)

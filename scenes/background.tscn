@@ -1,22 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://vycgqef684xi"]
+[gd_scene load_steps=3 format=3 uid="uid://dbe0qhy1ly7ui"]
 
-[ext_resource type="Texture2D" uid="uid://d1bu6d82eofj8" path="res://images/background/new-background.png" id="1_qaewh"]
+[ext_resource type="Texture2D" uid="uid://b3g1oiq1cm8eg" path="res://images/background/new-background.png" id="1_qaewh"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_qfjdu"]
-b = Vector2(857, 1)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ehbyr"]
+a = Vector2(604, 6)
 
-[node name="Background" type="Area2D"]
+[node name="Area2D" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(640, 359.5)
-scale = Vector2(1.50117, 1.7119)
+position = Vector2(641, 337.5)
+scale = Vector2(1.50117, 1.60714)
 texture = ExtResource("1_qaewh")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(638, 359.5)
-scale = Vector2(1.50117, 1.7119)
+position = Vector2(1922, 338)
+scale = Vector2(1.50351, 1.60714)
 texture = ExtResource("1_qaewh")
-offset = Vector2(854, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("SegmentShape2D_qfjdu")
+shape = SubResource("SegmentShape2D_ehbyr")
