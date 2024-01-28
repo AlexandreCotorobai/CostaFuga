@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfcjjnjj0x5da"
-path="res://.godot/imported/ground.png-7cdc00620168a47d6cdfce859a0cd62f.ctex"
+uid="uid://bghwiso108bkd"
+path="res://.godot/imported/GALAMBS-Running-Sheet.png-0d9aa10d8a1dcd5b747e5b5eb89132d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/background/ground.png"
-dest_files=["res://.godot/imported/ground.png-7cdc00620168a47d6cdfce859a0cd62f.ctex"]
+source_file="res://images/Galambs/GALAMBS-Running-Sheet.png"
+dest_files=["res://.godot/imported/GALAMBS-Running-Sheet.png-0d9aa10d8a1dcd5b747e5b5eb89132d6.ctex"]
 
 [params]
 
