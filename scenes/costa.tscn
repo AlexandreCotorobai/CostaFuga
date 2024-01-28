@@ -68,20 +68,19 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cqomj"]
-radius = 11.6667
+radius = 5.66667
 height = 39.3333
 
 [node name="Costa" type="CharacterBody2D"]
 position = Vector2(50, 600)
-scale = Vector2(3, 3)
+scale = Vector2(5, 5)
 script = ExtResource("1_hpb27")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_ayfnw")
 animation = &"correr"
-frame_progress = 0.716904
+frame_progress = 0.689193
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.666667, -1.33333)
+position = Vector2(-1.8, -1.4)
 shape = SubResource("CapsuleShape2D_cqomj")

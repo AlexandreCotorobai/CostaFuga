@@ -1,12 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://do6jl8noqq6gk"]
+[gd_scene load_steps=10 format=3 uid="uid://do6jl8noqq6gk"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_cri5j"]
 [ext_resource type="Texture2D" uid="uid://1miomqeke7vt" path="res://images/background/bg-img.jpg" id="1_wswwk"]
 [ext_resource type="PackedScene" uid="uid://bwktcf8enyrju" path="res://scenes/costa.tscn" id="2_65lj1"]
+[ext_resource type="PackedScene" uid="uid://tnbgvvwr5gmn" path="res://scenes/money.tscn" id="2_rl1dh"]
 [ext_resource type="PackedScene" uid="uid://biepwgseb1jt7" path="res://scenes/ground.tscn" id="4_4x4lc"]
+[ext_resource type="Script" path="res://Score.gd" id="6_75mun"]
+[ext_resource type="PackedScene" uid="uid://dv47lvnh05ve7" path="res://scenes/policia.tscn" id="7_wkvgs"]
+
+[sub_resource type="SystemFont" id="SystemFont_0h7sp"]
+font_names = PackedStringArray("Ink Free")
+
+[sub_resource type="LabelSettings" id="LabelSettings_xqvlh"]
+font = SubResource("SystemFont_0h7sp")
+font_size = 40
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_cri5j")
+money_scene = ExtResource("2_rl1dh")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(-534.554, -300.687)
@@ -14,7 +25,28 @@ scale = Vector2(1.83524, 1.83524)
 texture = ExtResource("1_wswwk")
 offset = Vector2(640, 360)
 
-[node name="Costa" parent="." instance=ExtResource("2_65lj1")]
-position = Vector2(53, 606)
-
 [node name="Ground" parent="." instance=ExtResource("4_4x4lc")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+
+[node name="Score" type="Label" parent="."]
+offset_left = 1019.0
+offset_top = 24.0
+offset_right = 1199.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 141
+text = "00000"
+label_settings = SubResource("LabelSettings_xqvlh")
+horizontal_alignment = 2
+autowrap_mode = 1
+uppercase = true
+script = ExtResource("6_75mun")
+
+[node name="Costa" parent="." instance=ExtResource("2_65lj1")]
+position = Vector2(43, 586)
+
+[node name="Policia" parent="." instance=ExtResource("7_wkvgs")]
+position = Vector2(-1197, 583)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

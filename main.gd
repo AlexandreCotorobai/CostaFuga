@@ -1,12 +1,14 @@
 extends Node2D
 
+@export var money_scene : PackedScene
+
 var game_over : bool
 var scroll 
 var score
 const SCROLL_SPEED : int = 4
 var screen_size : Vector2i
 var ground_height : int
-var money : Array
+var moneyArray : Array
 const MONEY_DELAY : int = 100
 const MONEY_RANGE : int = 200
 
@@ -14,16 +16,20 @@ const MONEY_RANGE : int = 200
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_window().size
+	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
 	new_game()
 	
 func new_game():
 	game_over = false
 	score = 0
 	scroll = 0
+	moneyArray.clear()
+	generate_money()
 	$Costa.reset()
 	
 func start_game():
 	consts.game_running = true
+	$Timer.start()
 	
 func _input(event):
 	if game_over == false:
@@ -38,4 +44,28 @@ func _process(delta):
 		scroll += SCROLL_SPEED
 		if scroll >= screen_size.x:
 			scroll = 0
+	#move ground
 	$Ground.position.x = -scroll
+	
+	#move money
+	for money in moneyArray:
+		if money.is_inside_tree():
+			money.position.x -= SCROLL_SPEED
+
+func _on_timer_timeout():
+	generate_money()
+
+func generate_money():
+	var money = money_scene.instantiate()
+	money.position.x = screen_size.x + MONEY_DELAY
+	money.position.y = (screen_size.y - ground_height)
+	money.hit.connect(money_hit)
+	add_child(money)
+	moneyArray.append(money)
+
+func money_hit(money):
+	consts.score += 500
+	print(consts.score)
+	moneyArray.remove_at(moneyArray.find(money))
+	money.queue_free()  # To delete it from the scene
+	
