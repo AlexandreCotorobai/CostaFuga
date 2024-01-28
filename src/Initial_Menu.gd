@@ -2,8 +2,8 @@ class_name MainMenu
 
 extends Control
 
-@onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/start as Button
-@onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/exit as Button
+@onready var start_button = $MarginContainer/HBoxContainer/VBoxContainer/start
+@onready var exit_button = $MarginContainer/HBoxContainer/VBoxContainer/exit
 const level = preload("res://scenes/main.tscn")
 
 

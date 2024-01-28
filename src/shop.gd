@@ -5,7 +5,8 @@ extends Control
 @onready var galamba = $MarginContainer/HBoxContainer/VBoxContainer/galamba
 @onready var advogado = $MarginContainer2/HBoxContainer/VBoxContainer/advogado
 @onready var ubereats = $MarginContainer2/HBoxContainer/VBoxContainer/ubereats
-@onready var fisco = $MarginContainer3/HBoxContainer/VBoxContainer/fisco
+@onready var fisco = $"MarginContainer3/HBoxContainer/VBoxContainer/Fuga ao Fisco"
+
 @onready var consts = get_node("/root/Consts")
 
 func _ready():
