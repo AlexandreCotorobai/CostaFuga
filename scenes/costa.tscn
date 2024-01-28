@@ -1,21 +1,70 @@
-[gd_scene load_steps=6 format=3 uid="uid://bwktcf8enyrju"]
+[gd_scene load_steps=13 format=3 uid="uid://bwktcf8enyrju"]
 
-[ext_resource type="Script" path="res://Costa.gd" id="1_qbpkd"]
-[ext_resource type="Texture2D" uid="uid://chdqe0fwy1rew" path="res://images/costa/COSTA-0002.png" id="2_0ra6n"]
-[ext_resource type="Texture2D" uid="uid://cnatskarrgf6" path="res://images/costa/COSTA-0003.png" id="3_6bbwt"]
+[ext_resource type="Script" path="res://src/Costa.gd" id="1_hpb27"]
+[ext_resource type="Texture2D" uid="uid://cgvfwc2ajuy6s" path="res://images/costa/COSTA-NORMAL-Sheet.png" id="2_83xmi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_868tr"]
+atlas = ExtResource("2_83xmi")
+region = Rect2(32, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vomag"]
+atlas = ExtResource("2_83xmi")
+region = Rect2(64, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2x5lw"]
+atlas = ExtResource("2_83xmi")
+region = Rect2(0, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8vj5"]
+atlas = ExtResource("2_83xmi")
+region = Rect2(96, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tolr"]
+atlas = ExtResource("2_83xmi")
+region = Rect2(128, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p51cn"]
+atlas = ExtResource("2_83xmi")
+region = Rect2(160, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idyuk"]
+atlas = ExtResource("2_83xmi")
+region = Rect2(192, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17tby"]
+atlas = ExtResource("2_83xmi")
+region = Rect2(224, 0, 32, 50)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ayfnw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_0ra6n")
+"texture": SubResource("AtlasTexture_868tr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_6bbwt")
+"texture": SubResource("AtlasTexture_vomag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2x5lw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8vj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tolr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p51cn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idyuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17tby")
 }],
 "loop": true,
 "name": &"correr",
-"speed": 1.0
+"speed": 8.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cqomj"]
@@ -25,12 +74,13 @@ height = 39.3333
 [node name="Costa" type="CharacterBody2D"]
 position = Vector2(50, 600)
 scale = Vector2(3, 3)
-script = ExtResource("1_qbpkd")
+script = ExtResource("1_hpb27")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
 sprite_frames = SubResource("SpriteFrames_ayfnw")
 animation = &"correr"
-frame_progress = 0.188935
+frame_progress = 0.716904
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.666667, -1.33333)

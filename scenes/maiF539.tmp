@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://do6jl8noqq6gk"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_cri5j"]
+[ext_resource type="Texture2D" uid="uid://1miomqeke7vt" path="res://images/background/bg-img.jpg" id="1_wswwk"]
+[ext_resource type="PackedScene" uid="uid://bwktcf8enyrju" path="res://scenes/costa.tscn" id="2_65lj1"]
+[ext_resource type="PackedScene" uid="uid://biepwgseb1jt7" path="res://scenes/ground.tscn" id="4_4x4lc"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_cri5j")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-534.554, -300.687)
+scale = Vector2(1.83524, 1.83524)
+texture = ExtResource("1_wswwk")
+offset = Vector2(640, 360)
+
+[node name="Costa" parent="." instance=ExtResource("2_65lj1")]
+position = Vector2(53, 606)
+
+[node name="Ground" parent="." instance=ExtResource("4_4x4lc")]
