@@ -20,6 +20,8 @@ func _ready():
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
 	new_game()
+	$Timer.start()
+	consts.game_running = true
 	
 func new_game():
 	game_over = false
@@ -29,17 +31,6 @@ func new_game():
 	moneyArray.clear()
 	generate_money()
 	$Costa.reset()
-	
-func start_game():
-	consts.game_running = true
-	$Timer.start()
-	
-func _input(event):
-	if game_over == false:
-		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				if consts.game_running == false:
-					start_game()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
