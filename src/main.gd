@@ -17,6 +17,7 @@ const MONEY_RANGE : int = 200
 @onready var consts = get_node("/root/Consts")
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_viewport().size = Vector2(1280, 1440)
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
 	new_game()

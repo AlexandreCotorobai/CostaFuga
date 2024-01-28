@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://do6jl8noqq6gk"]
+[gd_scene load_steps=11 format=3 uid="uid://do6jl8noqq6gk"]
 
 [ext_resource type="Script" path="res://src/main.gd" id="1_cri5j"]
 [ext_resource type="PackedScene" uid="uid://bwktcf8enyrju" path="res://scenes/costa.tscn" id="2_65lj1"]
 [ext_resource type="PackedScene" uid="uid://tnbgvvwr5gmn" path="res://scenes/money.tscn" id="2_rl1dh"]
+[ext_resource type="PackedScene" uid="uid://b1lf1vujxckbk" path="res://scenes/shop.tscn" id="3_ng7gj"]
 [ext_resource type="PackedScene" uid="uid://biepwgseb1jt7" path="res://scenes/ground.tscn" id="4_4x4lc"]
 [ext_resource type="Script" path="res://src/Score.gd" id="6_75mun"]
 [ext_resource type="PackedScene" uid="uid://dv47lvnh05ve7" path="res://scenes/policia.tscn" id="7_wkvgs"]
@@ -19,8 +20,13 @@ font_size = 40
 script = ExtResource("1_cri5j")
 money_scene = ExtResource("2_rl1dh")
 
+[node name="Shop" parent="." instance=ExtResource("3_ng7gj")]
+offset_left = 1.0
+offset_top = 684.0
+offset_right = 1278.0
+offset_bottom = 1436.0
+
 [node name="Background" parent="." instance=ExtResource("8_h1siq")]
-position = Vector2(1, -17)
 
 [node name="Ground" parent="." instance=ExtResource("4_4x4lc")]
 
