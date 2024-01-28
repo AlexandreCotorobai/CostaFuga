@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://do6jl8noqq6gk"]
 
-[ext_resource type="Script" path="res://main.gd" id="1_cri5j"]
+[ext_resource type="Script" path="res://src/main.gd" id="1_cri5j"]
 [ext_resource type="PackedScene" uid="uid://bwktcf8enyrju" path="res://scenes/costa.tscn" id="2_65lj1"]
 [ext_resource type="PackedScene" uid="uid://tnbgvvwr5gmn" path="res://scenes/money.tscn" id="2_rl1dh"]
 [ext_resource type="PackedScene" uid="uid://biepwgseb1jt7" path="res://scenes/ground.tscn" id="4_4x4lc"]
-[ext_resource type="Script" path="res://Score.gd" id="6_75mun"]
+[ext_resource type="Script" path="res://src/Score.gd" id="6_75mun"]
 [ext_resource type="PackedScene" uid="uid://dv47lvnh05ve7" path="res://scenes/policia.tscn" id="7_wkvgs"]
 [ext_resource type="PackedScene" uid="uid://dbe0qhy1ly7ui" path="res://scenes/background.tscn" id="8_h1siq"]
 
