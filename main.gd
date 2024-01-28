@@ -4,8 +4,10 @@ extends Node2D
 
 var game_over : bool
 var scroll 
+var bg_scroll
 var score
 const SCROLL_SPEED : int = 4
+const BG_SCROLL_SPEED : int = 2
 var screen_size : Vector2i
 var ground_height : int
 var moneyArray : Array
@@ -22,6 +24,7 @@ func _ready():
 func new_game():
 	game_over = false
 	score = 0
+	bg_scroll = 0
 	scroll = 0
 	moneyArray.clear()
 	generate_money()
@@ -44,8 +47,14 @@ func _process(delta):
 		scroll += SCROLL_SPEED
 		if scroll >= screen_size.x:
 			scroll = 0
+			
+		bg_scroll += BG_SCROLL_SPEED
+		if bg_scroll >= screen_size.x:
+			bg_scroll = 0
+		
 	#move ground
 	$Ground.position.x = -scroll
+	$Background2.position.x = -bg_scroll
 	
 	#move money
 	for money in moneyArray:

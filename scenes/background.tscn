@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://vycgqef684xi"]
+
+[ext_resource type="Texture2D" uid="uid://d1bu6d82eofj8" path="res://images/background/new-background.png" id="1_qaewh"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qfjdu"]
+b = Vector2(857, 1)
+
+[node name="Background" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(640, 359.5)
+scale = Vector2(1.50117, 1.7119)
+texture = ExtResource("1_qaewh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_qfjdu")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://biepwgseb1jt7"]
 
-[ext_resource type="Texture2D" uid="uid://bp22wplv5n0gy" path="res://images/background/ground.png" id="1_acqvl"]
+[ext_resource type="Texture2D" uid="uid://cfcjjnjj0x5da" path="res://images/background/new-ground.png" id="1_ismdp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eid1t"]
 size = Vector2(4818, 79)
@@ -8,9 +8,9 @@ size = Vector2(4818, 79)
 [node name="Ground" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1281, 581.5)
-scale = Vector2(2.135, 0.39625)
-texture = ExtResource("1_acqvl")
+position = Vector2(1282.5, 683)
+scale = Vector2(3.00351, 1.89655)
+texture = ExtResource("1_ismdp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(153, 700.5)

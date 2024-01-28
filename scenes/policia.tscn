@@ -79,7 +79,6 @@ script = ExtResource("1_wqd8u")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xisco")
 animation = &"correr"
-frame_progress = 0.446006
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.2, 0.6)
