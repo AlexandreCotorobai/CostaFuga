@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://tnbgvvwr5gmn"]
 
-[ext_resource type="Script" path="res://src/money.gd" id="1_3q6aa"]
+[ext_resource type="Script" path="res://money.gd" id="1_3q6aa"]
 [ext_resource type="Texture2D" uid="uid://c7u1ow52455jf" path="res://images/misc/MONEY-500.png" id="1_xi1xi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6h3b"]
