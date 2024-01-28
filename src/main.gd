@@ -20,7 +20,7 @@ func _ready():
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
 	new_game()
-	
+
 func new_game():
 	game_over = false
 	score = 0
@@ -29,7 +29,7 @@ func new_game():
 	moneyArray.clear()
 	generate_money()
 	$Costa.reset()
-	
+
 func start_game():
 	consts.game_running = true
 	$Timer.start()
