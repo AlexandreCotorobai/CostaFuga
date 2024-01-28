@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdurpcevg2dnl"]
+[gd_scene load_steps=8 format=3 uid="uid://cdurpcevg2dnl"]
 
 [ext_resource type="Script" path="res://src/Initial_Menu.gd" id="1_fvs36"]
 [ext_resource type="Texture2D" uid="uid://d1bu6d82eofj8" path="res://images/background/new-background.png" id="2_iagyp"]
+[ext_resource type="PackedScene" uid="uid://dv47lvnh05ve7" path="res://scenes/policia.tscn" id="3_t0pjw"]
+[ext_resource type="PackedScene" uid="uid://bwktcf8enyrju" path="res://scenes/costa.tscn" id="4_ru633"]
 
 [sub_resource type="SystemFont" id="SystemFont_pwacu"]
 font_names = PackedStringArray("Impact")
@@ -85,3 +87,9 @@ theme_override_fonts/font = SubResource("SystemFont_seb4k")
 theme_override_font_sizes/font_size = 50
 text = "Exit
 "
+
+[node name="Policia" parent="." instance=ExtResource("3_t0pjw")]
+position = Vector2(164, 636)
+
+[node name="Costa" parent="." instance=ExtResource("4_ru633")]
+position = Vector2(1127, 624)
