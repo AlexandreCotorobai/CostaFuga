@@ -6,7 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://d1bu6d82eofj8" path="res://images/background/new-background.png" id="3_u3lp3"]
 [ext_resource type="PackedScene" uid="uid://biepwgseb1jt7" path="res://scenes/ground.tscn" id="4_4x4lc"]
 [ext_resource type="PackedScene" uid="uid://vycgqef684xi" path="res://scenes/background.tscn" id="4_lbbc0"]
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://scenes/background.gd" id="5_lnerg"]
+=======
+[ext_resource type="Script" path="res://src/background.gd" id="5_lnerg"]
+>>>>>>> de463070e03edcec66816015609fb8f7163576e9
 [ext_resource type="Script" path="res://src/Score.gd" id="6_75mun"]
 [ext_resource type="PackedScene" uid="uid://dv47lvnh05ve7" path="res://scenes/policia.tscn" id="7_wkvgs"]
 
