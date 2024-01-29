@@ -17,7 +17,7 @@ func _physics_process(delta):
 		if consts.score < 0:
 			consts.score = 0
 		self.velocity = Vector2(consts.SPEED, 0)
-		if self.position.x < 1000:
+		if self.position.x < 1000 and consts.galamba:
 			move_and_slide()
 		if self.position.x > 50:
 			# loose game

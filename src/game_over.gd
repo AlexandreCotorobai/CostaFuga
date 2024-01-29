@@ -8,6 +8,7 @@ const level = preload("res://scenes/main.tscn")
 
 
 func _ready():
+	get_viewport().size = Vector2(1280, 720)
 	tryagain_button.button_down.connect(on_tryagain_pressed)
 	exit_button.button_down.connect(on_exit_pressed)
 

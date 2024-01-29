@@ -69,7 +69,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cqomj"]
 radius = 5.66667
-height = 39.3333
+height = 200.0
 
 [node name="Costa" type="CharacterBody2D"]
 position = Vector2(50, 600)

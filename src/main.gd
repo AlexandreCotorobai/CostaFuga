@@ -55,13 +55,13 @@ func _process(delta):
 			money.position.x -= SCROLL_SPEED
 
 func _on_timer_timeout():
-	print("TIMER")
+	
 	generate_money()
 
 func generate_money():
 	var money = money_scene.instantiate()
 	money.position.x = screen_size.x + MONEY_DELAY
-	print("GAGAG")
+	
 	money.position.y = 0
 	money.hit.connect(money_hit)
 	add_child(money)
@@ -72,4 +72,4 @@ func money_hit(money):
 	print(consts.score)
 	moneyArray.remove_at(moneyArray.find(money))
 	money.queue_free()  # To delete it from the scene
-	
+

@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://dxd0cts5un0mx"]
+
+[ext_resource type="Texture2D" uid="uid://bghwiso108bkd" path="res://images/Galambs/GALAMBS-Running-Sheet.png" id="1_ayu21"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jiw2r"]
+atlas = ExtResource("1_ayu21")
+region = Rect2(0, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjw7t"]
+atlas = ExtResource("1_ayu21")
+region = Rect2(32, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pkf2g"]
+atlas = ExtResource("1_ayu21")
+region = Rect2(64, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ub5so"]
+atlas = ExtResource("1_ayu21")
+region = Rect2(96, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpx37"]
+atlas = ExtResource("1_ayu21")
+region = Rect2(128, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewn8v"]
+atlas = ExtResource("1_ayu21")
+region = Rect2(160, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uhpi"]
+atlas = ExtResource("1_ayu21")
+region = Rect2(192, 0, 32, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2byrh"]
+atlas = ExtResource("1_ayu21")
+region = Rect2(224, 0, 32, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5po7r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jiw2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjw7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pkf2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ub5so")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpx37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewn8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uhpi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2byrh")
+}],
+"loop": true,
+"name": &"correr",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1gsi6"]
+radius = 5.66667
+height = 39.3333
+
+[node name="Galamba" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5po7r")
+animation = &"correr"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -57)
+shape = SubResource("CapsuleShape2D_1gsi6")

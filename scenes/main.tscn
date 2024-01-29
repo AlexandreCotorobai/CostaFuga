@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://do6jl8noqq6gk"]
+[gd_scene load_steps=14 format=3 uid="uid://do6jl8noqq6gk"]
 
 [ext_resource type="Script" path="res://src/main.gd" id="1_cri5j"]
 [ext_resource type="PackedScene" uid="uid://bwktcf8enyrju" path="res://scenes/costa.tscn" id="2_65lj1"]
@@ -8,6 +8,9 @@
 [ext_resource type="Script" path="res://src/Score.gd" id="6_75mun"]
 [ext_resource type="PackedScene" uid="uid://dv47lvnh05ve7" path="res://scenes/policia.tscn" id="7_wkvgs"]
 [ext_resource type="PackedScene" uid="uid://dbe0qhy1ly7ui" path="res://scenes/background.tscn" id="8_h1siq"]
+[ext_resource type="PackedScene" uid="uid://dxd0cts5un0mx" path="res://scenes/galamba.tscn" id="9_6q71k"]
+[ext_resource type="Script" path="res://scenes/galamba.gd" id="10_f6y8a"]
+[ext_resource type="AudioStream" uid="uid://de2mxhlhnka3" path="res://audios/Initial D - Deja vu (Instrumental).mp3" id="11_hs6qm"]
 
 [sub_resource type="SystemFont" id="SystemFont_0h7sp"]
 font_names = PackedStringArray("Ink Free")
@@ -38,7 +41,9 @@ offset_left = 1019.0
 offset_top = 24.0
 offset_right = 1199.0
 offset_bottom = 100.0
-theme_override_font_sizes/font_size = 141
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "00000"
 label_settings = SubResource("LabelSettings_xqvlh")
 horizontal_alignment = 2
@@ -51,5 +56,15 @@ position = Vector2(43, 586)
 
 [node name="Policia" parent="." instance=ExtResource("7_wkvgs")]
 position = Vector2(-1197, 583)
+
+[node name="Galamba" parent="." instance=ExtResource("9_6q71k")]
+position = Vector2(-106, 621)
+scale = Vector2(5, 5)
+script = ExtResource("10_f6y8a")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_hs6qm")
+volume_db = 8.054
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

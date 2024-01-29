@@ -17,16 +17,25 @@ func _ready():
 	fisco.button_down.connect(on_fisco_pressed)
 
 func on_roubo_pressed() -> void:
-	pass
+	consts.police_speed += 5
+	consts.score += 5000
 	
 func on_galamba_pressed() -> void:
-	pass
+	consts.passive_income += 50
+	consts.police_speed += 0.2
+	consts.galamba = true
 	
 func on_advogado_pressed() -> void:
-	pass
-
+	var cost = 50
+	if consts.score < cost:
+		return
+	consts.police_speed -= 5
+	consts.passive_income -= cost
+	
 func on_ubereats_pressed() -> void:
-	pass
+	consts.police_speed += 0.05
+	consts.passive_income += 20
 
 func on_fisco_pressed() -> void:
-	pass
+	consts.passive_income += 10
+	consts.police_speed += 0.1

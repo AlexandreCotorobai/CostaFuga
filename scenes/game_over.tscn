@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://1eqss5btlnjk"]
+[gd_scene load_steps=6 format=3 uid="uid://1eqss5btlnjk"]
 
 [ext_resource type="Script" path="res://src/game_over.gd" id="1_khmus"]
+[ext_resource type="AudioStream" uid="uid://cum5nf35v60yd" path="res://audios/e-mentira.mp3" id="2_7ox7v"]
 
 [sub_resource type="SystemFont" id="SystemFont_s5j52"]
 font_names = PackedStringArray("Impact")
@@ -86,3 +87,8 @@ theme_override_fonts/font = SubResource("SystemFont_itdse")
 theme_override_font_sizes/font_size = 50
 text = "Exit
 "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_7ox7v")
+volume_db = 8.054
+autoplay = true
